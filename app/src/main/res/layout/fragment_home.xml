@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80DEEA"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="即時油價"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView_92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="21dp"
+        android:text="92無鉛"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_92"
+        android:layout_alignBottom="@+id/textView_92"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginStart="69dp"
+        android:text="95無鉛"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView_98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView_92"
+        android:layout_below="@+id/textView_92"
+        android:layout_marginTop="29dp"
+        android:text="98無鉛"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView_super"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_98"
+        android:layout_alignBottom="@+id/textView_98"
+        android:layout_alignStart="@+id/textView_95"
+        android:text="柴油"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_super"
+        android:layout_marginTop="12dp">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </GridLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/button_weather"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="氣象(OPEN DATA)"-->
+    <!--android:textSize="25sp"-->
+    <!--android:layout_below="@+id/textView_super"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="27dp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="訊息保養區"-->
+    <!--android:textSize="25sp"-->
+    <!--android:layout_marginTop="62dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignTop="@+id/button_weather"/>-->
+
+</RelativeLayout>

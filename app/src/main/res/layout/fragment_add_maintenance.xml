@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80DEEA"
+    tools:context=".Activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/button_view_include"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/oil_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="@color/colortwo"
+            android:gravity="center"
+            android:text="油類"
+            android:textColor="@color/Watercolor"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Supplies_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="@color/colorthree"
+            android:gravity="center"
+            android:text="耗材"
+            android:textColor="@color/Watercolor"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_view_include">
+    </FrameLayout>
+
+
+</RelativeLayout>

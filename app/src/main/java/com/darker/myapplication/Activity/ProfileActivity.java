@@ -1,4 +1,4 @@
-package com.darker.myapplication;
+package com.darker.myapplication.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.darker.myapplication.Activity.LoginActivity;
+import com.darker.myapplication.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

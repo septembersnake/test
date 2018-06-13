@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_centerVertical="true"
@@ -10,11 +10,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="會員登入"
+            android:text="會員註冊"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal" />
 
@@ -35,15 +36,15 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/buttonSignin"
+            android:id="@+id/buttonSignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="登入" />
+            android:text="註冊" />
 
         <TextView
-            android:text="沒有帳號按此註冊"
-            android:id="@+id/textViewSignUp"
+            android:text="已有帳號按此登入"
+            android:id="@+id/textViewSignin"
             android:textAlignment="center"
             android:layout_margin="15dp"
             android:layout_width="match_parent"

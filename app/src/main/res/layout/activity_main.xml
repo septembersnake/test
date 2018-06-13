@@ -1,55 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:background="#fff"
+    tools:context=".Activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/main_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:text="首頁"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="25sp"/>
+        <ImageView
+            android:id="@+id/btn_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/login_member"
+            android:gravity="center"
+            android:padding="4dp" />
+        <TextView
+            android:id="@+id/tv_showname"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="48dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/btn_chart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_chart"
+            android:gravity="center"
+            android:padding="8dp" />
+    </RelativeLayout>
 
     <LinearLayout
-        android:layout_centerVertical="true"
-        android:layout_width="match_parent"
+        android:id="@+id/button_view_include"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="User Registration"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal" />
-
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:hint="Enter email"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:hint="Enter password"
-            android:inputType="textPassword" />
-
-        <Button
-            android:id="@+id/buttonSignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Signup" />
-
-        <TextView
-            android:text="Already Registered? Signin Here"
-            android:id="@+id/textViewSignin"
-            android:textAlignment="center"
-            android:layout_margin="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/home_btn"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/house_outline" />
+        <ImageView
+            android:id="@+id/tv_btn"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/service" />
+        <ImageView
+            android:id="@+id/anime_btn"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/gps" />
+        <ImageView
+            android:id="@+id/variety_btn"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/help" />
+        <ImageView
+            android:id="@+id/setting_btn"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/setting" />
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_view_include"
+        android:layout_below="@+id/main_layout_title"
+        android:background="#23bfc8"
+        ></FrameLayout>
 
 </RelativeLayout>

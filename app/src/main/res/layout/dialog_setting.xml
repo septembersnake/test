@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/dialog_spinner"
+        style="@android:style/Widget.Spinner"
+        android:layout_width="80pt"
+        android:layout_height="20pt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:spinnerMode="dialog"/>
+
+    <EditText
+        android:id="@+id/dialog_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dialog_spinner"
+        android:layout_below="@+id/dialog_spinner"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:color="#FFFFFF"
+        android:gravity="center"
+        android:hint="請輸入車牌號碼"
+        android:maxLength="10"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dialog_spinner"
+        android:layout_below="@+id/dialog_input"
+        android:layout_marginTop="24dp"
+        android:text="輸入格式範例：ABC-123" />
+
+</RelativeLayout>
