@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "44523504779",
+    "firebase_url": "https://test-72950.firebaseio.com",
+    "project_id": "test-72950",
+    "storage_bucket": "test-72950.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44523504779:android:8baf9a2a5f287168",
+        "android_client_info": {
+          "package_name": "com.darker.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44523504779-kl5fn9q1u2itg29spqodqoria6828r9c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darker.myapplication",
+            "certificate_hash": "3481da9a4ed9bac5cb0583ce4623bc01f19cdc16"
+          }
+        },
+        {
+          "client_id": "44523504779-38j33i4smeh7q317mj3nolv1k26dj3el.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "44523504779-38j33i4smeh7q317mj3nolv1k26dj3el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1qdj1JXlMvPxOYeAXtRMTFNXqFPibNLE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44523504779-38j33i4smeh7q317mj3nolv1k26dj3el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
