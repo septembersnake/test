@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -70,7 +71,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Locatio
     SweetAlertDialog pDialog;
     @Nullable
     private Button battery_btn,car_dealers_btn,gas_btn;
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
         findById(view);
         Fragment a = getChildFragmentManager().findFragmentById(R.id.fragment_view_map);
@@ -96,9 +98,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Locatio
         return view;
     }
     private void findById(View view) {
-        battery_btn =(Button)view.findViewById(R.id.battery_btn2);
-        car_dealers_btn=(Button)view.findViewById(R.id.car_dealers_btn2);
-        gas_btn=(Button)view.findViewById(R.id.gas_btn2);
+        battery_btn = view.findViewById(R.id.battery_btn2);
+        car_dealers_btn = view.findViewById(R.id.car_dealers_btn2);
+        gas_btn = view.findViewById(R.id.gas_btn2);
 
         battery_btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,7 +18,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@color/colorone"
-            android:drawableBottom="@drawable/ser_btn_battery"
+            android:drawableBottom="@drawable/gps_btn_battery"
             android:gravity="center"
             android:textColor="#FFFFFF" />
 
@@ -28,7 +28,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@color/colortwo"
-            android:drawableBottom="@drawable/ser_btn_motor"
+            android:drawableBottom="@drawable/gps_btn_motor"
             android:gravity="center"
             android:textColor="#FFFFFF" />
 
@@ -39,7 +39,7 @@
             android:layout_weight="1"
 
             android:background="@color/colorthree"
-            android:drawableBottom="@drawable/ser_btn_oil"
+            android:drawableBottom="@drawable/gps_btn_oil"
             android:gravity="center"
             android:textColor="#FFFFFF" />
     </LinearLayout>

@@ -12,10 +12,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/main_title_text"
+            android:id="@+id/textView_title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_weight="1"
             android:background="#ffff"
             android:text="首頁"
             android:gravity="center"
@@ -23,14 +22,14 @@
             android:textColor="#000"
             android:textSize="25sp"/>
         <ImageView
-            android:id="@+id/btn_user"
+            android:id="@+id/imageView_account"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/login_member"
+            android:src="@drawable/home_btn_account"
             android:gravity="center"
             android:padding="4dp" />
         <TextView
-            android:id="@+id/tv_showname"
+            android:id="@+id/textView_email"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -43,11 +42,11 @@
             android:textSize="20sp"
             android:gravity="center"/>
         <ImageView
-            android:id="@+id/btn_chart"
+            android:id="@+id/imageView_ic_chart"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_chart"
+            android:src="@drawable/home_btn_ic_chart"
             android:gravity="center"
             android:padding="8dp" />
     </RelativeLayout>
@@ -59,40 +58,40 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
         <ImageView
-            android:id="@+id/home_btn"
+            android:id="@+id/imageView_home"
             android:layout_width="60dp"
             android:layout_height="55dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:src="@drawable/house_outline" />
+            android:src="@drawable/home_btn_home" />
         <ImageView
-            android:id="@+id/tv_btn"
+            android:id="@+id/imageView_service"
             android:layout_width="60dp"
             android:layout_height="55dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:src="@drawable/service" />
+            android:src="@drawable/home_btn_service" />
         <ImageView
-            android:id="@+id/anime_btn"
+            android:id="@+id/imageView_gps"
             android:layout_width="60dp"
             android:layout_height="55dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:src="@drawable/gps" />
+            android:src="@drawable/home_btn_gps" />
         <ImageView
-            android:id="@+id/variety_btn"
+            android:id="@+id/imageView_help"
             android:layout_width="60dp"
             android:layout_height="55dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:src="@drawable/help" />
+            android:src="@drawable/home_btn_help" />
         <ImageView
-            android:id="@+id/setting_btn"
+            android:id="@+id/imageView_setting"
             android:layout_width="60dp"
             android:layout_height="55dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:src="@drawable/setting" />
+            android:src="@drawable/home_btn_setting" />
     </LinearLayout>
 
     <FrameLayout
@@ -101,7 +100,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/button_view_include"
         android:layout_below="@+id/main_layout_title"
-        android:background="#23bfc8"
-        ></FrameLayout>
+        android:background="#23bfc8">
+    </FrameLayout>
 
 </RelativeLayout>

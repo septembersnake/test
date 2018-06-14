@@ -26,9 +26,8 @@ import com.darker.myapplication.fragment.SettingFragment;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener  {
-    private TextView titleTextView,tv_showname;
-    private ImageView movieBtn, tvBtn,animeBtn, varietyBtn,abcBtn;
-    private ImageView btn_user,btn_chart;
+    private TextView textView_title,textView_email;
+    private ImageView imageView_account,imageView_ic_chart,imageView_home, imageView_service,imageView_gps, imageView_help,imageView_setting;
     private long clickTime = 0;
 
     private HomeFragment homeFragment;
@@ -67,39 +66,37 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         checkPermission();
     }
     private void findById() {
-        titleTextView = this.findViewById(R.id.main_title_text);
+        textView_title = findViewById(R.id.textView_title);
+        textView_email = findViewById(R.id.textView_email);
+        textView_email.setText(getIntent().getStringExtra("Email"));
+        imageView_account = findViewById(R.id.imageView_account);
+        imageView_account.setOnClickListener(listener);
+        imageView_home = this.findViewById(R.id.imageView_home);
+        imageView_home.setOnClickListener(this);
+        imageView_service = this.findViewById(R.id.imageView_service);
+        imageView_service.setOnClickListener(this);
+        imageView_gps = this.findViewById(R.id.imageView_gps);
+        imageView_gps.setOnClickListener(this);
+        imageView_help = this.findViewById(R.id.imageView_help);
+        imageView_help.setOnClickListener(this);
+        imageView_setting = this.findViewById(R.id.imageView_setting);
+        imageView_setting.setOnClickListener(this);
+        imageView_ic_chart = findViewById(R.id.imageView_ic_chart);
 
-        tv_showname= findViewById(R.id.tv_showname);
-        tv_showname.setText(getIntent().getStringExtra("Email"));
-
-        movieBtn = this.findViewById(R.id.home_btn);
-        tvBtn = this.findViewById(R.id.tv_btn);
-        animeBtn = this.findViewById(R.id.anime_btn);
-        varietyBtn = this.findViewById(R.id.variety_btn);
-        abcBtn = this.findViewById(R.id.setting_btn);
-        btn_user = findViewById(R.id.btn_user);
-        btn_chart = findViewById(R.id.btn_chart);
-        btn_user.setOnClickListener(listener);
-
-        movieBtn.setOnClickListener(this);
-        tvBtn.setOnClickListener(this);
-        animeBtn.setOnClickListener(this);
-        varietyBtn.setOnClickListener(this);
-        abcBtn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         // TODO Auto-generated methodstub
         switch (view.getId()) {
-            case R.id.home_btn:
+            case R.id.imageView_home:
                 getSupportFragmentManager().beginTransaction()
                         .show(homeFragment).hide(maintenanceFragment).hide(mapFragment).hide(settingFragment).hide(maintenanceAddFragment)
                         .commit();
-                titleTextView.setText("首頁");
-                btn_chart.setVisibility(View.VISIBLE);
+                textView_title.setText("首頁");
+                imageView_ic_chart.setVisibility(View.VISIBLE);
                 break;
-            case R.id.tv_btn:
+            case R.id.imageView_service:
                 if(sharedPreferences.getString("userid","").equals("")){
                     new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                             .setTitleText("請登入")
@@ -117,24 +114,24 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     getSupportFragmentManager().beginTransaction()
                             .show(maintenanceFragment).hide(homeFragment).hide(mapFragment).hide(settingFragment).hide(maintenanceAddFragment)
                             .commit();
-                    titleTextView.setText("保養");
-                    btn_chart.setVisibility(View.VISIBLE);
+                    textView_title.setText("保養");
+                    imageView_ic_chart.setVisibility(View.VISIBLE);
                 }
                 break;
-            case R.id.anime_btn:
+            case R.id.imageView_gps:
                 getSupportFragmentManager().beginTransaction()
                         .show(mapFragment).hide(homeFragment).hide(maintenanceFragment).hide(settingFragment).hide(maintenanceAddFragment)
                         .commit();
-                titleTextView.setText("位置服務");
-                btn_chart.setVisibility(View.INVISIBLE);
+                textView_title.setText("位置服務");
+                imageView_ic_chart.setVisibility(View.INVISIBLE);
 
                 break;
-            case R.id.setting_btn:
+            case R.id.imageView_setting:
                 getSupportFragmentManager().beginTransaction()
                         .show(settingFragment).hide(homeFragment).hide(mapFragment).hide(maintenanceFragment).hide(maintenanceAddFragment)
                         .commit();
-                titleTextView.setText("設定");
-                btn_chart.setVisibility(View.INVISIBLE);
+                textView_title.setText("設定");
+                imageView_ic_chart.setVisibility(View.INVISIBLE);
                 break;
             default:
                 break;
@@ -171,37 +168,37 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     public void chageFragment(String string){
         if(string.equals("首頁")){
-            btn_chart.setVisibility(View.INVISIBLE);
+            imageView_ic_chart.setVisibility(View.INVISIBLE);
             getSupportFragmentManager().beginTransaction()
                     .show(homeFragment).hide(maintenanceFragment).hide(mapFragment).hide(settingFragment).hide(maintenanceAddFragment)
                     .commit();
-            titleTextView.setText("首頁");
+            textView_title.setText("首頁");
         }else if(string.equals("保養")){
-            btn_chart.setVisibility(View.VISIBLE);
+            imageView_ic_chart.setVisibility(View.VISIBLE);
             getSupportFragmentManager().beginTransaction()
                     .show(maintenanceFragment).hide(homeFragment).hide(mapFragment).hide(settingFragment).hide(maintenanceAddFragment)
                     .commit();
-            titleTextView.setText("保養");
+            textView_title.setText("保養");
         }else if(string.equals("位置服務")){
-            btn_chart.setVisibility(View.INVISIBLE);
+            imageView_ic_chart.setVisibility(View.INVISIBLE);
             getSupportFragmentManager().beginTransaction()
                     .show(mapFragment).hide(homeFragment).hide(maintenanceFragment).hide(settingFragment).hide(maintenanceAddFragment)
                     .commit();
-            titleTextView.setText("位置服務");
+            textView_title.setText("位置服務");
         }else if(string.equals("設定")) {
-            btn_chart.setVisibility(View.INVISIBLE);
+            imageView_ic_chart.setVisibility(View.INVISIBLE);
             getSupportFragmentManager().beginTransaction()
                     .show(settingFragment).hide(homeFragment).hide(mapFragment).hide(maintenanceFragment).hide(maintenanceAddFragment)
                     .commit();
-            titleTextView.setText("設定");
+            textView_title.setText("設定");
         }
 
         else if(string.equals("新增保養")) {
-            btn_chart.setVisibility(View.INVISIBLE);
+            imageView_ic_chart.setVisibility(View.INVISIBLE);
             getSupportFragmentManager().beginTransaction()
                     .show(maintenanceAddFragment).hide(homeFragment).hide(mapFragment).hide(maintenanceFragment).hide(settingFragment)
                     .commit();
-            titleTextView.setText("保養");
+            textView_title.setText("保養");
         }
     }
     //打電話權限檢查

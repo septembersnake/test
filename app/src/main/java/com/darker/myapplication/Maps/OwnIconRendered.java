@@ -20,12 +20,12 @@ public class OwnIconRendered extends DefaultClusterRenderer<MyItem> {
     protected void onBeforeClusterItemRendered(MyItem item, MarkerOptions markerOptions) {
         Log.e("item","item");
         if(MapFragment.tpye.equals("battery")) {
-            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.battery_gps1));
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.gps_mark_battery));
         }
         else if(MapFragment.tpye.equals("car_dealers")){
-            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.motor_gps1));
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.gps_mark_motor));
         }else if(MapFragment.tpye.equals("gas")){
-            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.oil_gps10));
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.gps_mark_oil));
         }
         markerOptions.snippet(item.getSnippet());
         markerOptions.title(item.getTitle());
