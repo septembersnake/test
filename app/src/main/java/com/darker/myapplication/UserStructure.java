@@ -1,4 +1,4 @@
-package com.darker.myapplication.Structure;
+package com.darker.myapplication;
 
 import java.util.HashMap;
 import java.util.Map;

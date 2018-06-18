@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.darker.myapplication.R;
-import com.darker.myapplication.Structure.UserStructure;
+import com.darker.myapplication.UserStructure;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -127,6 +127,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if(view == textViewSignin){
             startActivity(new Intent(this, LoginActivity.class));
         }
+    }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
     }
 }

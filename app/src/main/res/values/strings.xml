@@ -1,11 +1,4 @@
 <resources>
-    <string name="app_name">測試用</string>
-
-    <string-array name="kind">
-        <item>汽車</item>
-        <item>重機車(50C.C.以上)</item>
-        <item>輕機車(50C.C.)</item>
-        <item>動力機械車(電動車)</item>
-    </string-array>
+    <string name="app_name">機車改裝細項</string>
 
 </resources>

@@ -3,20 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/textViewUserEmail"
-            android:layout_centerHorizontal="true"/>
+        <RelativeLayout
+            android:id="@+id/main_layout_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:id="@+id/buttonLogout"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/main_title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:text="使用者"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="25sp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/main_layout_title"
+            android:id="@+id/main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/textViewUserEmail"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登出"
+                    android:id="@+id/buttonLogout"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
 
 </RelativeLayout>
